@@ -1,0 +1,22 @@
+{
+  "name": "rf2-results-parser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanMcCready/rf2-results-parser.git"
+  },
+  "author": "Stefan McCready <stefan.mccready@sky.uk> (https://github.com/StefanMcCready)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StefanMcCready/rf2-results-parser/issues"
+  },
+  "homepage": "https://github.com/StefanMcCready/rf2-results-parser#readme",
+  "dependencies": {
+    "xml-js": "1.6.11"
+  }
+}
