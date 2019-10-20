@@ -1,8 +1,8 @@
-const stripValue = require('../utils/stripValue');
-const raceMapping = require('../mappers/race');
-const qualiMapping = require('../mappers/qualifying');
+import { raceMapping } from '../mappers/race';
+import { qualiMapping } from '../mappers/qualifying';
+import { stripValue } from '../utils/stripValue';
 
-module.exports = (results, session) => {
+export const selectDriverDetails = (results, session) => {
   if (session === 'Qualifying') {
 
     const sortedByPosition = arr => arr.sort((a, b) => { return stripValue(a.Position) - stripValue(b.Position) });

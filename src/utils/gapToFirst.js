@@ -1,12 +1,12 @@
-const stripValue = require('./stripValue');
-const formatTime = require('./formatTime');
+import { stripValue } from './stripValue';
+import { formatTime } from './formatTime';
 
 const formatGap = (time, leadersTime) => {
     const gapToLeader = (parseFloat(time)) - (parseFloat(leadersTime));
     return formatTime(gapToLeader.toFixed(3));
 }
 
-module.exports = (driversTime, leadersTime, driversLapCount, lapCount, session) => {
+export const gapToFirst = (driversTime, leadersTime, driversLapCount, lapCount, session) => {
   if (session === 'Race') {
     const lapsDown = parseInt(stripValue(lapCount)) - parseInt(driversLapCount);
 

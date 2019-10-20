@@ -1,6 +1,6 @@
-const stripValue = require('../utils/stripValue');
+import { stripValue } from '../utils/stripValue';
 
-module.exports = (results, session) => {
+export const selectRaceDetails = (results, session) => {
   const { RaceLaps, TrackEvent, ServerName, RaceTime } = results;
   
   return {

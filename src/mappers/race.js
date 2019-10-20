@@ -1,8 +1,8 @@
-const stripValue = require('../utils/stripValue');
-const gapToFirst = require('../utils/gapToFirst');
-const formatTime = require('../utils/formatTime');
+import { stripValue } from '../utils/stripValue';
+import { gapToFirst } from '../utils/gapToFirst';
+import { formatTime } from '../utils/formatTime';
 
-module.exports = (driver, leaderFinishTime, raceLaps, session) => {
+export const raceMapping = (driver, leaderFinishTime, raceLaps, session) => {
   const { Name, TeamName, Laps, FinishTime, Pitstops, GridPos, ClassPosition, CarType } = driver;
 
   return {
@@ -14,5 +14,5 @@ module.exports = (driver, leaderFinishTime, raceLaps, session) => {
     lapsCompleted:  stripValue(Laps),
     gapToFirst: stripValue(ClassPosition) !== '1' ? (FinishTime ? gapToFirst(stripValue(FinishTime), stripValue(leaderFinishTime), stripValue(Laps), raceLaps, session) : 'DNF') : null,
     pitstops: stripValue(Pitstops)
-  } 
+  }
 }

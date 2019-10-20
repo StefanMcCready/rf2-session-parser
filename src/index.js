@@ -1,10 +1,10 @@
-const convert = require('xml-js');
+import { convert } from 'xml-js';
 
-const stripValue = require('./utils/stripValue');
-const selectDriverDetails = require('./selectors/driverDetails');
-const selectRaceDetails = require('./selectors/raceDetails');
+import { stripValue } from './utils/stripValue';
+import { selectRaceDetails } from './selectors/raceDetails';
+import { selectDriverDetails } from './selectors/driverDetails';
 
-module.exports = (data) => {
+export const parseResults = (data) => {
   const parsedData = convert.xml2js(data, { compact: true, spaces: 4 });
   const results = parsedData.rFactorXML.RaceResults;
 
@@ -20,4 +20,3 @@ module.exports = (data) => {
 
   return resultsData;
 }
-

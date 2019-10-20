@@ -1,3 +1,3 @@
-module.exports = (value) => {
+export const stripValue = (value) => {
   return value._text;
 }

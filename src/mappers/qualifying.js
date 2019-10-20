@@ -1,8 +1,8 @@
 const stripValue = require('../utils/stripValue');
 const formatTime = require('../utils/formatTime');
-const gapToFirst = require('../utils/gapToFirst');
+import { gapToFirst } from  '../utils/gapToFirst';
 
-module.exports = (driver, fastestLap, session) => {
+export const qualiMapping = (driver, fastestLap, session) => {
   const { Name, TeamName, Position, BestLapTime, CarType } = driver;
 
   return {
