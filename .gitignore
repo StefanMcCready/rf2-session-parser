@@ -61,4 +61,4 @@ typings/
 .next
 
 # ignore production build
-dist
+index.js
