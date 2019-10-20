@@ -5,6 +5,18 @@ As of today the file generated is given to us a very heavy XML document, which i
 
 This utility will allow you to pass in a results file and it will parse it into a usable JSON format for you whilst also getting rid of any cruff you may not need right away.
 
+## Installation
+
+**NPM**
+```
+npm install rf2-session-parser --save
+```
+
+**Yarn**
+```
+yarn add rf2-session-parser
+```
+
 ## Usage
 
 **Import (CommonJS)**
