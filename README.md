@@ -33,9 +33,6 @@ import { parseResults } from 'rf2-results-parser';
 
 How you supply it the file is up to you, but chances are you will be using it within an API. Here is an example when using Node's FS module:
 ```
-fs = require('fs');
-const parseResults = require('./src/index.js');
-
 fs.readFile('./mocks/race-example.xml', (err, data) => {
   const resultsData = parseResults(data);
   console.log(parsedData);
