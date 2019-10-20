@@ -2,26 +2,29 @@ const stripValue = require('../utils/stripValue');
 const raceMapping = require('../mappers/race');
 const qualiMapping = require('../mappers/qualifying');
 
-const sortedByPosition = arr => arr.sort((a, b) => { return a.position - b.position });
-
 module.exports = (results, session) => {
   if (session === 'Qualifying') {
-    const driverData = results.Qualify.Driver.map(driver => {
-      return qualiMapping(driver);
+
+    const sortedByPosition = arr => arr.sort((a, b) => { return stripValue(a.Position) - stripValue(b.Position) });
+    const sortedResult = sortedByPosition(results.Qualify.Driver);
+
+    const driverData = sortedResult.map(driver => {
+      const fastestLap = results.Qualify.Driver[0].BestLapTime;
+      return qualiMapping(driver, fastestLap, session);
     });
 
-    const sortedResult = sortedByPosition(driverData);
-
-    return sortedResult;
+    return driverData;
   }
 
   if (session === 'Race') {
-    const driverData = results.Race.Driver.map(driver => {
-      return raceMapping(driver);
+    const sortedByPosition = arr => arr.sort((a, b) => { return stripValue(a.ClassPosition) - stripValue(b.ClassPosition) });
+    const sortedResult = sortedByPosition(results.Race.Driver);
+
+    const driverData = sortedResult.map(driver => {
+      const leaderFinishTime = results.Race.Driver[0].FinishTime;
+      return raceMapping(driver, leaderFinishTime, results.RaceLaps, session);
     });
 
-    const sortedResult = sortedByPosition(driverData);
-
-    return sortedResult;
+    return driverData;
   }
 }

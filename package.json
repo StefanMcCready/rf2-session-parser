@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/StefanMcCready/rf2-results-parser#readme",
   "dependencies": {
+    "date-fns": "2.5.1",
+    "express": "4.17.1",
     "xml-js": "1.6.11"
   }
 }
