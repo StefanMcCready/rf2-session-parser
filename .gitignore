@@ -60,5 +60,6 @@ typings/
 # next.js build output
 .next
 
-# ignore production build
-index.js
+# ignore test files
+harness.js
+race-example.xml
