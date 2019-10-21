@@ -137,3 +137,5 @@ const resultsData = parseResults(data, { pointsAwarded: points });
     pointsAwarded: 2
   },
 ```
+
+**NOTE**: This will only work for race results
