@@ -126,7 +126,7 @@ console.log(parsedData);
 
 ```
 
-Response:
+**Response**:
 ```
   { position: '5',
     name: 'Matthew Williams ',
@@ -135,7 +135,7 @@ Response:
     raceTime: '01:07:45.566',
     lapsCompleted: '47',
     gapToFirst: '00:00:17.361',
-    pitstops: '2'
+    pitstops: '2',
     pointsAwarded: 2
   },
 ```
