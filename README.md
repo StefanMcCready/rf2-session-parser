@@ -122,8 +122,6 @@ const points = {
 }
 
 const resultsData = parseResults(data, { pointsAwarded: points });
-console.log(parsedData);
-
 ```
 
 **Response**:
