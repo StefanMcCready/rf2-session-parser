@@ -44,7 +44,7 @@ For now the function only takes 1 arguement which is the data from the file you 
 
 ## Response
 
-Here is an example response for a qualifying session:
+Here is an example response for a race session:
 
 ```
 { event: 
