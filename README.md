@@ -108,10 +108,11 @@ There is the option of passing in different fields to allow you to cusomize the 
 
 ### pointsAwarded
 
-Type: `object`
-Description: Will apply a points value to each of the drivers results data set based on where they have finished
+**Type**: `object`
 
-Usage:
+**Description**: Will apply a points value to each of the drivers results data set based on where they have finished
+
+**Usage**:
 ```
 const points = {
   "1": 10,
@@ -122,7 +123,7 @@ const points = {
   "6": 1,
 }
 
-const resultsData = parseResults(data), { pointsAwarded: points });
+const resultsData = parseResults(data, { pointsAwarded: points });
 console.log(parsedData);
 
 ```
