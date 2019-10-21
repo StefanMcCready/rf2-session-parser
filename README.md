@@ -104,8 +104,6 @@ Here is an example response for a qualifying session:
 
 ## Options
 
-There is the option of passing in different fields to allow you to cusomize the response you get back.
-
 ### pointsAwarded
 
 **Type**: `object`
