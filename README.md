@@ -9,12 +9,12 @@ This utility will allow you to pass in a results file and it will parse it into 
 
 **NPM**
 ```
-npm install rf2-session-parser --save
+npm install rf2-results-parser --save
 ```
 
 **Yarn**
 ```
-yarn add rf2-session-parser
+yarn add rf2-results-parser
 ```
 
 ## Usage
