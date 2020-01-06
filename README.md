@@ -104,24 +104,30 @@ Here is an example response for a race session:
 
 ## Options
 
-### pointsAwarded
+### points
 
 **Type**: `object`
 
-**Description**: Will apply a points value to each of the drivers results data set based on where they have finished
+**Description**: This will apply a points score based on race position. YOu can also setup bonus points should you wish to award points for things like pole position or fastest lap
 
 **Usage**:
 ```
 const points = {
-  "1": 10,
-  "2": 8,
-  "3": 6,
-  "4": 4,
-  "5": 2,
-  "6": 1,
+  racePosition: {
+    "1": 10,
+    "2": 8,
+    "3": 6,
+    "4": 4,
+    "5": 2,
+    "6": 1,
+  }
+  bonus: {
+    polePosition: 1,
+    fastestLap: 1,
+  }
 }
 
-const resultsData = parseResults(data, { pointsAwarded: points });
+const resultsData = parseResults(data, { points: points });
 ```
 
 **Response**:
@@ -134,8 +140,8 @@ const resultsData = parseResults(data, { pointsAwarded: points });
     lapsCompleted: '47',
     gapToFirst: '00:00:17.361',
     pitstops: '2',
-    pointsAwarded: 2
+    pointsAwarded: {
+      racePosition: 2
+    }
   },
 ```
-
-**NOTE**: This will only work for race results

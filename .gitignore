@@ -63,3 +63,4 @@ typings/
 # ignore test files
 harness.js
 race-example.xml
+quali-example.xml

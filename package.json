@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "nodemon ./harness.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "dependencies": {
     "date-fns": "2.5.1",
     "express": "4.17.1",
+    "nodemon": "2.0.1",
     "uglifyjs-webpack-plugin": "2.2.0",
     "xml-js": "1.6.11"
   },
